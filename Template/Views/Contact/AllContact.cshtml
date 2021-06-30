@@ -1,0 +1,14 @@
+﻿@model List<Template.Data.Contact>
+
+<div class="row">
+	@foreach (var contact in Model)
+	{
+		<div class="col-lg-4 col-md-6 col-sm-6">
+			<div class="contact__address__item">
+				<h4>@contact.NameOfPlace</h4>
+				<p>@contact.Description</p>
+				<span>@contact.PhoneNumber</span>
+			</div>
+		</div>
+	}
+	</div>

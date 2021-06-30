@@ -1,0 +1,203 @@
+﻿
+@{
+	ViewBag.Title = "Blog";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+	<!-- Offcanvas Menu Begin -->
+	<div class="offcanvas-menu-overlay"></div>
+	<div class="offcanvas-menu-wrapper">
+		<div class="offcanvas__widget">
+			<a href="#"><i class="fa fa-cart-plus"></i></a>
+			<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+			<a href="#" class="primary-btn">Add Car</a>
+		</div>
+		<div class="offcanvas__logo">
+			<a href="./index.html"><img src="~/Content/images/logo.png" alt=""></a>
+		</div>
+		<div id="mobile-menu-wrap"></div>
+		<ul class="offcanvas__widget__add">
+			<li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+			<li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+		</ul>
+		<div class="offcanvas__phone__num">
+			<i class="fa fa-phone"></i>
+			<span>(+12) 345 678 910</span>
+		</div>
+		<div class="offcanvas__social">
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-google"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+	<!-- Offcanvas Menu End -->
+	<!-- Header Section Begin -->
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<ul class="header__top__widget">
+							<li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+							<li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+						</ul>
+					</div>
+					<div class="col-lg-5">
+						<div class="header__top__right">
+							<div class="header__top__phone">
+								<i class="fa fa-phone"></i>
+								<span>(+12) 345 678 910</span>
+							</div>
+							<div class="header__top__social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-google"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="header__logo">
+						<a href="./index.html"><img src="~/Content/images/logo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					<div class="header__nav">
+						<nav class="header__menu">
+							<ul>
+								<li><a href="">@Html.ActionLink("Home", "Index", "Home")</a></li>
+								<li><a href="">@Html.ActionLink("Cars", "Cars", "Home")</a></li>
+								<li class="active"><a href="./blog.html">@Html.ActionLink("Blog", "Blog", "Home")</a></li>
+								<li>
+									<a href="#">Pages</a>
+									<ul class="dropdown">
+										<li><a href="">@Html.ActionLink("About", "About", "Home")</a></li>
+										<li><a href="">@Html.ActionLink("Car Details", "carDetails", "Home")</a></li>
+										<li><a href="">@Html.ActionLink("Blog Details", "blogDetails", "Home")</a></li>
+									</ul>
+								</li>
+								<li><a href="">@Html.ActionLink("About", "About", "Home")</a></li>
+								<li><a href="">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
+							</ul>
+						</nav>
+						<div class="header__nav__widget">
+							<div class="header__nav__widget__btn">
+								<a href="#"><i class="fa fa-cart-plus"></i></a>
+								<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+							</div>
+							<a href="#" class="primary-btn">Add Car</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="canvas__open">
+				<span class="fa fa-bars"></span>
+			</div>
+		</div>
+	</header>
+	<!-- Header Section End -->
+	<!-- Breadcrumb End -->
+	<div class="breadcrumb-option set-bg" data-setbg="/Content/images/breadcrumb-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>Latest Blogs</h2>
+						<div class="breadcrumb__links">
+							<a href="./index.html"><i class="fa fa-home"></i> Home</a>
+							<span>Our Blogs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcrumb Begin -->
+	<!-- Blog Section Begin -->
+	<section class="blog spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					@Html.Action("AllBlogs", "Blog");
+
+					<div class="pagination__option">
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#"><span class="arrow_carrot-2right"></span></a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-9">
+					<div class="blog__sidebar">
+						<form action="#" class="blog__sidebar__search">
+							<input type="text" placeholder="Search...">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
+						<div class="blog__sidebar__feature">
+							<h4>Feature News</h4>
+							<div class="blog__sidebar__feature__item">
+								<h6><a href="#">Where To Look For Cheap Brochure</a></h6>
+								<ul>
+									<li>By Polly Williams</li>
+									<li>Dec 27, 2018</li>
+								</ul>
+							</div>
+							<div class="blog__sidebar__feature__item">
+								<h6><a href="#">Using Banner Stands To Increase</a></h6>
+								<ul>
+									<li>By Evelyn Lane</li>
+									<li>Dec 17, 2018</li>
+								</ul>
+							</div>
+							<div class="blog__sidebar__feature__item">
+								<h6><a href="#">Promotional Advertising Specialty</a></h6>
+								<ul>
+									<li>By Don Townsend</li>
+									<li>Dec 22, 2018</li>
+								</ul>
+							</div>
+						</div>
+						<div class="blog__sidebar__categories">
+							<h4>Categories</h4>
+							<ul>
+								<li><a href="#">Creativity</a></li>
+								<li><a href="#">Design</a></li>
+								<li><a href="#">Inspiration</a></li>
+								<li><a href="#">News</a></li>
+							</ul>
+						</div>
+						<div class="blog__sidebar__tag">
+							<h4>Tag</h4>
+							<a href="#">Car Dealer</a>
+							<a href="#">bmw</a>
+							<a href="#">Chevrolet</a>
+							<a href="#">ferrari</a>
+							<a href="#">Honda</a>
+							<a href="#">Hatchback</a>
+						</div>
+						<div class="blog__sidebar__newslatter">
+							<h4>Newsletter</h4>
+							<p>Subscribe our newsletter gor get</p>
+							<form action="#">
+								<input type="text" placeholder="Your email">
+								<button type="submit">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog Section End -->
+
+

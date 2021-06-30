@@ -1,0 +1,120 @@
+﻿@model Template.Areas.Admin.Models.LoginModel  
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bubbly - Boootstrap 5 Admin template by Bootstrapious.com</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex">
+	<!-- Google fonts - Popppins for copy-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+	<!-- Prism Syntax Highlighting-->
+	<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/plugins/toolbar/prism-toolbar.css">
+	<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/themes/prism-okaidia.css">
+	<!-- The Main Theme stylesheet (Contains also Bootstrap CSS)-->
+	<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/css/style.default.8275f313.css" id="theme-stylesheet">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/css/custom.0a822280.css">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/img/favicon.png">
+<style>
+	.validation-summary-errors{
+		color:red;
+	}
+	.field-validation-error{
+		color:red;
+	}
+</style>
+</head>
+<body>
+	<div class="page-holder align-items-center py-4 bg-gray-100 vh-100">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 px-lg-4">
+					<div class="card">
+						<div class="card-header px-lg-5">
+							<div class="card-heading text-primary">Bubbly Dashboard</div>
+						</div>
+						<div class="card-body p-lg-5">
+							<h3 class="mb-4">Hi, welcome back! 👋👋</h3>
+							<p class="text-muted text-sm mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+							@using (Html.BeginForm("Login", "Account", FormMethod.Post, htmlAttributes: new { @id = "loginFrom" }))
+							{
+								@Html.AntiForgeryToken();
+								@Html.ValidationSummary();
+								<div class="form-floating mb-3">
+									@Html.LabelFor(x => x.Email)
+									@Html.TextBoxFor(x => x.Email, new { @class = "form-control", @id = "flotingInput" })
+									@Html.ValidationMessageFor(x => x.Email)
+								</div>
+
+								<div class="form-floating mb-3">
+									@Html.LabelFor(x => x.Password)
+									@Html.TextBoxFor(x => x.Password, new { @class = "form-control", @id = "flotingInput" })
+									@Html.ValidationMessageFor(x => x.Password)
+
+								</div>
+								<button class="btn btn-primary btn-lg" type="submit">Submit</button>
+
+							}
+							@*<form id="loginForm" action="index.html">
+									<div class="form-floating mb-3">
+										<input class="form-control" id="floatingInput" type="email" placeholder="name@example.com">
+										<label for="floatingInput">Email address</label>
+									</div>
+									<div class="form-floating mb-3">
+										<input class="form-control" id="floatingPassword" type="password" placeholder="Password">
+										<label for="floatingPassword">Password</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="checkbox" name="remember" id="remember">
+										<label class="form-check-label" for="remember">Remember me</label>
+									</div>
+
+
+
+								</form>*@
+
+						</div>
+						<div class="card-footer px-lg-5 py-lg-4">
+							<div class="text-sm text-muted">Don't have an account? <a href="register.html">Register</a>.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xl-5 ms-xl-auto px-lg-4 text-center text-primary">
+					<img class="img-fluid mb-4" width="300" src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/img/drawkit-illustration.svg" alt="" style="transform: rotate(10deg)">
+					<h1 class="mb-4">Start saving <br class="d-none d-lg-inline">your time & money</h1>
+					<p class="lead text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	@section ValidationProcess{
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+	}
+	<!-- JavaScript files-->
+	<script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<!-- Main Theme JS File-->
+	<script src="js/theme.413b8ff4.js"></script>
+	<!-- Prism for syntax highlighting-->
+	<script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/prism.js"></script>
+	<script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+	<script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+	<script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-1/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+	<script type="text/javascript">
+	// Optional
+		Prism.plugins.NormalizeWhitespace.setDefaults({
+			'remove-trailing': true,
+			'remove-indent': true,
+			'left-trim': true,
+			'right-trim': true,
+		});</script>
+	<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+</html>

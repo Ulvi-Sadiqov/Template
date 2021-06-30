@@ -1,0 +1,32 @@
+﻿@model List<Template.Data.PersonSayAboutUs>
+
+<div class="row">
+	<div class="testimonial__slider owl-carousel">
+		@foreach (var comment in Model)
+		{
+			<div class="col-lg-6">
+				<div class="testimonial__item">
+					<div class="testimonial__item__author">
+						<div class="testimonial__item__author__pic">
+							<img src="~/Content/images/testimonial/@comment.Image" alt="">
+						</div>
+						<div class="testimonial__item__author__text">
+							<div class="rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>
+							<h5>@comment.Username /<span> @comment.Job</span></h5>
+						</div>
+					</div>
+					<p>
+						@comment.Text
+					</p>
+				</div>
+			</div>
+		}
+		</div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿@model List<Template.Data.Car>
+
+<div class="row">
+	@foreach (var car in Model)
+	{
+		<div class="col-lg-4 col-md-4">
+			<div class="car__item">
+				<div class="car__item__pic__slider owl-carousel">
+					<img src="~/Content/images/cars/@car.Image1" alt="">
+					<img src="~/Content/images/cars/@car.Image2" alt="">
+					<img src="~/Content/images/cars/@car.Image3" alt="">
+					<img src="~/Content/images/cars/@car.Image4" alt="">
+				</div>
+				<div class="car__item__text">
+					<div class="car__item__text__inner">
+						<div class="label-date">@car.Year</div>
+						<h5><a href="#">@car.Name</a></h5>
+						<ul>
+							<li><span>@car.Mi</span> mi</li>
+							<li>Auto</li>
+							<li><span>700</span> hp</li>
+						</ul>
+					</div>
+					<div class="car__item__price">
+						<span class="car-option">For Rent</span>
+						<h6>@car.Price <span> @if (car.forMonth == true)
+						{ <span>/Month</span> }</span></h6>
+
+   </div>
+
+</div>
+
+</div>
+
+</div>
+	}
+	</div>
+
+
+
+
+
+
+
+

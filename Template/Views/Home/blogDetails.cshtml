@@ -1,0 +1,289 @@
+﻿
+@{
+	ViewBag.Title = "blogDetails";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+	<!-- Offcanvas Menu Begin -->
+	<div class="offcanvas-menu-overlay"></div>
+	<div class="offcanvas-menu-wrapper">
+		<div class="offcanvas__widget">
+			<a href="#"><i class="fa fa-cart-plus"></i></a>
+			<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+			<a href="#" class="primary-btn">Add Car</a>
+		</div>
+		<div class="offcanvas__logo">
+			<a href="./index.html"><img src="~/Content/images/logo.png" alt=""></a>
+		</div>
+		<div id="mobile-menu-wrap"></div>
+		<ul class="offcanvas__widget__add">
+			<li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+			<li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+		</ul>
+		<div class="offcanvas__phone__num">
+			<i class="fa fa-phone"></i>
+			<span>(+12) 345 678 910</span>
+		</div>
+		<div class="offcanvas__social">
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-google"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+	<!-- Offcanvas Menu End -->
+	<!-- Header Section Begin -->
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<ul class="header__top__widget">
+							<li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+							<li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+						</ul>
+					</div>
+					<div class="col-lg-5">
+						<div class="header__top__right">
+							<div class="header__top__phone">
+								<i class="fa fa-phone"></i>
+								<span>(+12) 345 678 910</span>
+							</div>
+							<div class="header__top__social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-google"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="header__logo">
+						<a href="./index.html"><img src="~/Content/images/logo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					<div class="header__nav">
+						<nav class="header__menu">
+							<ul>
+								<li><a href="">@Html.ActionLink("Home", "Index", "Home")</a></li>
+								<li><a href="./car.html">@Html.ActionLink("Cars", "Cars", "Home")</a></li>
+								<li><a href="">@Html.ActionLink("Blog", "Blog", "Home")</a></li>
+								<li  class="active">
+									<a href="#">Pages</a>
+									<ul class="dropdown">
+										<li><a href="">@Html.ActionLink("About", "About", "Home") </a></li>
+										<li><a href="">@Html.ActionLink("Car Details", "carDetails", "Home")</a></li>
+										<li><a href="">@Html.ActionLink("Blog Details", "blogDetails", "Home")</a></li>
+									</ul>
+								</li>
+								<li><a href="/Home/About">@Html.ActionLink("About", "About", "Home")</a></li>
+								<li><a href="/Home/Contact">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
+							</ul>
+						</nav>
+						<div class="header__nav__widget">
+							<div class="header__nav__widget__btn">
+								<a href="#"><i class="fa fa-cart-plus"></i></a>
+								<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+							</div>
+							<a href="#" class="primary-btn">Add Car</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="canvas__open">
+				<span class="fa fa-bars"></span>
+			</div>
+		</div>
+	</header>
+	<!-- Header Section End -->
+	<!-- Blog Details Hero Begin -->
+	<section class="blog-details-hero spad set-bg" data-setbg="/Content/images/blog/details/details-hero-bg.jpg">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-10">
+					<div class="blog__details__hero__text">
+						<span class="label">Car Dealer, BMW</span>
+						<h2>An Update on Adobe Fuse as Adobe Moves to the Future of 3D & AR Development</h2>
+						<ul>
+							<li>
+								<img src="~/Content/images/blog/details/details-hero-avatar.png" alt=""> <span>By Evelyn Lane</span>
+							</li>
+							<li><i class="fa fa-calendar-o"></i> <span>Dec 17, 2019</span></li>
+							<li><i class="fa fa-edit"></i> <span>2 Comment</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog Details Hero End -->
+	<!-- Blog Details Section Begin -->
+	<section class="blog-details spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="blog__details__pic">
+						<img src="~/Content/images/blog/details/details-pic.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="blog__details__text">
+						<p>
+							WordPress, the premier free open-source blogging utility, has gone through several upgrades
+							in its life. Today it’s one of the most popular blogging tools on the Internet; it’s easy to
+							use, powerful, and very versatile. It also has a very active base of skilled users who are
+							eager to improve the product and to help out those who haven’t tried it before.
+						</p>
+						<p>
+							Though the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure
+							as the newest version 2.0.3. The best part of the new version is the security patch; the new
+							“nonce” security key reduces the chances of a malicious hacker finding a way into your admin
+							panel.
+						</p>
+					</div>
+					<div class="blog__details__quote">
+						<p>
+							Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely
+							download and install if only
+						</p>
+					</div>
+					<div class="blog__details__desc">
+						<p>
+							In addition to the 2.0.3 install, you should be aware that some bugs have already been found,
+							and that a plugin will need to be installed to repair those bugs. If you modify any of the
+							files that this patch plugin fixes, you’ll need to either merge the changes with the new
+							files or make those changes manually once again. You can find these issues by running a diff
+							to locate changes; if the only changes you find are your own, then you’re fine, and
+							otherwise you’ll need to merge them manually into the
+						</p>
+					</div>
+					<div class="blog__details__share">
+						<a href="#" class="blog__details__share__item">
+							<i class="fa fa-facebook"></i>
+							<span>Share</span>
+						</a>
+						<a href="#" class="blog__details__share__item twitter">
+							<i class="fa fa-twitter"></i>
+							<span>Share</span>
+						</a>
+						<a href="#" class="blog__details__share__item google">
+							<i class="fa fa-google"></i>
+							<span>Share</span>
+						</a>
+						<a href="#" class="blog__details__share__item linkedin">
+							<i class="fa fa-linkedin"></i>
+							<span>Share</span>
+						</a>
+					</div>
+					<div class="blog__details__author">
+						<div class="blog__details__author__pic">
+							<img src="~/Content/images/blog/details/author.png" alt="">
+						</div>
+						<div class="blog__details__author__text">
+							<h5>Marry Jean</h5>
+							<p>
+								Another thing that I don’t really like about them is that they’re such sideline actors,
+								lacking the abilities to participate actively.
+							</p>
+						</div>
+					</div>
+					<div class="blog__details__btns">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="row">
+									<div class="col-lg-6">
+										<a href="#" class="blog__details__btns__item set-bg"
+										   data-setbg="/Content/images/blog/details/pre.jpg">
+											<h6>Promotional Advertising Specialty</h6>
+											<ul>
+												<li>By Don Townsend</li>
+												<li>Dec 22, 2018</li>
+											</ul>
+										</a>
+									</div>
+									<div class="col-lg-6">
+										<a href="#" class="blog__details__btns__item set-bg"
+										   data-setbg="/Content/images/blog/details/next.jpg">
+											<h6>Promotional Advertising Specialty</h6>
+											<ul>
+												<li>By Don Townsend</li>
+												<li>Dec 22, 2018</li>
+											</ul>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="blog__details__comment">
+						<h4>12 Comment</h4>
+						<div class="blog__details__comment__item">
+							<div class="blog__details__comment__item__pic">
+								<img src="~/Content/images/blog/details/comment-1.png" alt="">
+							</div>
+							<div class="blog__details__comment__item__text">
+								<h6>Brandon Kelley</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore
+								</p>
+								<a href="#">Like</a>
+								<a href="#">Reply</a>
+							</div>
+						</div>
+						<div class="blog__details__comment__item reply__comment">
+							<div class="blog__details__comment__item__pic">
+								<img src="~/Content/images/blog/details/comment-2.png" alt="">
+							</div>
+							<div class="blog__details__comment__item__text">
+								<h6>Brandon Kelley</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+								<a href="#">Like</a>
+								<a href="#">Reply</a>
+							</div>
+						</div>
+					</div>
+					<div class="blog__details__comment__form">
+						<h4>Leave A Reply</h4>
+						<form action="#">
+							<div class="input-list">
+								<div class="input-list-item">
+									<p>Name</p>
+									<input type="text">
+								</div>
+								<div class="input-list-item">
+									<p>Email</p>
+									<input type="text">
+								</div>
+								<div class="input-list-item">
+									<p>Website</p>
+									<input type="text">
+								</div>
+							</div>
+							<div class="input-desc">
+								<p>Comment</p>
+								<textarea></textarea>
+							</div>
+							<button type="submit" class="site-btn">Submit Now</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog Details Section End -->
+
+

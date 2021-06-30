@@ -1,0 +1,31 @@
+﻿@model List<Template.Data.News>
+<div class="row">
+	@foreach (var news in Model)
+	{
+		if (news.IsLast == false)
+		{
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="blog__item">
+					<div class="blog__item__pic set-bg" data-setbg="/Content/images/blog/@news.ImagePath">
+						<ul>
+							<li>@news.Writer</li>
+							<li>@news.UploadTime</li>
+							<li>8 Comment</li>
+						</ul>
+					</div>
+					<div class="blog__item__text">
+						<h5><a href="#">@news.Title</a></h5>
+						<p>
+							@news.Description
+						</p>
+					</div>
+				</div>
+			</div>
+		}
+	}
+</div>
+
+
+
+
+
